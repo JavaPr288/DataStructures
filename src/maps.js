@@ -21,7 +21,6 @@ for (el of resultData ){
 resultData.set('avergae',33.89)
 console.log(resultData)
 
-resultData.values
 
 resultData.get("average")
 
