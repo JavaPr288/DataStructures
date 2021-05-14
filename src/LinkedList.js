@@ -1,5 +1,5 @@
 // like we did for sets and maps
-class LinkedList {
+export default class LinkedList {
   //when is executed
   // can we tweak to get a starting and ending value
   constructor() {
@@ -78,14 +78,12 @@ class LinkedList {
 
   insertAfter(value, afterValue) {
     const currentNode = this.find(afterValue);
-    if(currentNode){
+    if (currentNode) {
       const newNode = { value: value, next: currentNode.next };
-      currentNode.next=newNode  // if you have a typo like currentNode.nex=newNode get a really weird result
+      currentNode.next = newNode; // if you have a typo like currentNode.nex=newNode get a really weird result
       return true;
     }
-    return false
-
-
+    return false;
   }
 
   //find all occurences of the value and delete.
@@ -117,7 +115,7 @@ class LinkedList {
 }
 
 const linkedList1 = new LinkedList();
-for (i = 0; i < 5; i++) {
+for (var i = 0; i < 5; i++) {
   linkedList1.append(i * i);
 }
 linkedList1.addFront(365);
@@ -131,7 +129,7 @@ console.log(linkedList1.toArray());
 
 console.log(linkedList1.find(4));
 
-linkedList1.insertAfter(660,4)
-linkedList1.insertAfter(true,660)
+linkedList1.insertAfter(660, 4);
+linkedList1.insertAfter(true, 660);
 
 console.log(linkedList1.toArray());
